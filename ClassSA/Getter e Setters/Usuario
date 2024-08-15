@@ -1,0 +1,39 @@
+// Getters e Setters
+    // public String getId() { return id; }
+    // public void setId(String id) { this.id = id; }
+
+    // public String getNome() { return nome; }
+    // public void setNome(String nome) { this.nome = nome; }
+
+    // public String getEmail() { return email; }
+    // public void setEmail(String email) { this.email = email; }
+
+    // public String getSenha() { return senha; }
+    // public void setSenha(String senha) { this.senha = senha; }
+
+    // public List<Post> getPosts() { return posts; }
+    // public void setPosts(List<Post> posts) { this.posts = posts; }
+
+    // public List<Usuario> getSeguidores() { return seguidores; }
+    // public void setSeguidores(List<Usuario> seguidores) { this.seguidores = seguidores; }
+
+    // public List<Usuario> getSeguindo() { return seguindo; }
+    // public void setSeguindo(List<Usuario> seguindo) { this.seguindo = seguindo; }
+
+    // public void adicionarPost(Post post) {
+    //     this.posts.add(post);
+    // }
+
+    // public void seguir(Usuario usuario) {
+    //     if (!this.seguindo.contains(usuario)) {
+    //         this.seguindo.add(usuario);
+    //         usuario.getSeguidores().add(this);
+    //     }
+    // }
+
+    // public void deixarDeSeguir(Usuario usuario) {
+    //     if (this.seguindo.contains(usuario)) {
+    //         this.seguindo.remove(usuario);
+    //         usuario.getSeguidores().remove(this);
+    //     }
+    // }

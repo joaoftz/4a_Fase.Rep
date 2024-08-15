@@ -1,0 +1,32 @@
+// Getters e Setters
+    // public String getId() { return id; }
+    // public void setId(String id) { this.id = id; }
+
+    // public Usuario getAutor() { return autor; }
+    // public void setAutor(Usuario autor) { this.autor = autor; }
+
+    // public String getDescricao() { return descricao; }
+    // public void setDescricao(String descricao) { this.descricao = descricao; }
+
+    // public String getImagemUrl() { return imagemUrl; }
+    // public void setImagemUrl(String imagemUrl) { this.imagemUrl = imagemUrl; }
+
+    // public List<Comentario> getComentarios() { return comentarios; }
+    // public void setComentarios(List<Comentario> comentarios) { this.comentarios = comentarios; }
+
+    // public List<Usuario> getCurtidas() { return curtidas; }
+    // public void setCurtidas(List<Usuario> curtidas) { this.curtidas = curtidas; }
+
+    // public void adicionarComentario(Comentario comentario) {
+    //     this.comentarios.add(comentario);
+    // }
+
+    // public void adicionarCurtida(Usuario usuario) {
+    //     if (!this.curtidas.contains(usuario)) {
+    //         this.curtidas.add(usuario);
+    //     }
+    // }
+
+    // public void removerCurtida(Usuario usuario) {
+    //     this.curtidas.remove(usuario);
+    // }

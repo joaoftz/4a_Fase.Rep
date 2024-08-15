@@ -16,52 +16,13 @@ public class Usuario {
         this.seguidores = new ArrayList<>();
         this.seguindo = new ArrayList<>();
     }
-
-    // Getters e Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public String getSenha() { return senha; }
-    public void setSenha(String senha) { this.senha = senha; }
-
-    public List<Post> getPosts() { return posts; }
-    public void setPosts(List<Post> posts) { this.posts = posts; }
-
-    public List<Usuario> getSeguidores() { return seguidores; }
-    public void setSeguidores(List<Usuario> seguidores) { this.seguidores = seguidores; }
-
-    public List<Usuario> getSeguindo() { return seguindo; }
-    public void setSeguindo(List<Usuario> seguindo) { this.seguindo = seguindo; }
-
-    public void adicionarPost(Post post) {
-        this.posts.add(post);
-    }
-
-    public void seguir(Usuario usuario) {
-        if (!this.seguindo.contains(usuario)) {
-            this.seguindo.add(usuario);
-            usuario.getSeguidores().add(this);
-        }
-    }
-
-    public void deixarDeSeguir(Usuario usuario) {
-        if (this.seguindo.contains(usuario)) {
-            this.seguindo.remove(usuario);
-            usuario.getSeguidores().remove(this);
-        }
-    }
+    
 }
 public class Postagem {
     private String id;
     private Usuario autor;
     private String descricao;
-    private String imagemUrl;
+    private String imagem;
     private List<Comentario> comentarios;
     private List<Usuario> curtidas;
 
@@ -69,45 +30,13 @@ public class Postagem {
         this.id = id;
         this.autor = autor;
         this.descricao = descricao;
-        this.imagemUrl = imagemUrl;
+        this.imagemUrl = imagem;
         this.comentarios = new ArrayList<>();
         this.curtidas = new ArrayList<>();
     }
 
-    // Getters e Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-
-    public Usuario getAutor() { return autor; }
-    public void setAutor(Usuario autor) { this.autor = autor; }
-
-    public String getDescricao() { return descricao; }
-    public void setDescricao(String descricao) { this.descricao = descricao; }
-
-    public String getImagemUrl() { return imagemUrl; }
-    public void setImagemUrl(String imagemUrl) { this.imagemUrl = imagemUrl; }
-
-    public List<Comentario> getComentarios() { return comentarios; }
-    public void setComentarios(List<Comentario> comentarios) { this.comentarios = comentarios; }
-
-    public List<Usuario> getCurtidas() { return curtidas; }
-    public void setCurtidas(List<Usuario> curtidas) { this.curtidas = curtidas; }
-
-    public void adicionarComentario(Comentario comentario) {
-        this.comentarios.add(comentario);
-    }
-
-    public void adicionarCurtida(Usuario usuario) {
-        if (!this.curtidas.contains(usuario)) {
-            this.curtidas.add(usuario);
-        }
-    }
-
-    public void removerCurtida(Usuario usuario) {
-        this.curtidas.remove(usuario);
-    }
+    
 }
-
 
 public class Comentario {
     private String id;
@@ -135,7 +64,7 @@ public class Like {
 }
 public class BarReceitas {
     private String id;
-    private String image;
+    private String imagem;
     private String title;
     private List<Ingredientes> ingredientes;
     private String conteudo;
@@ -145,9 +74,8 @@ public class BarReceitas {
     public BarReceitas(String id, String image, String title, List <Ingredientes> ingredientes , String conteudo, List<Like> likes){
 
     this.id = id;
-    this.image = image;
+    this.image = imagem;
     this.title = title;
-    this 
     this.conteudo = conteudo;
     }
 }
