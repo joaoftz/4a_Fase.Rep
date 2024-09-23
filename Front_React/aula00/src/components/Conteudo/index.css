@@ -1,0 +1,15 @@
+.conteudo-container{
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     
+}
+.cores-coloridas{
+    width: 500px;
+
+
+}
