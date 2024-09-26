@@ -8,10 +8,10 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.senai</groupId>
-	<artifactId>relacionamentos</artifactId>
+	<groupId>senai.example</groupId>
+	<artifactId>prova</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>relacionamentos</name>
+	<name>prova</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

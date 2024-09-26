@@ -1,10 +1,10 @@
-package com.senai.relacionamentos;
+package senai.example.prova;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RelacionamentosApplicationTests {
+class ProvaApplicationTests {
 
 	@Test
 	void contextLoads() {

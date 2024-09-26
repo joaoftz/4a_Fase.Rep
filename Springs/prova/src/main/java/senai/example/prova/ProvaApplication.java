@@ -1,13 +1,13 @@
-package com.senai.relacionamentos;
+package senai.example.prova;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RelacionamentosApplication {
+public class ProvaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RelacionamentosApplication.class, args);
+		SpringApplication.run(ProvaApplication.class, args);
 	}
 
 }
