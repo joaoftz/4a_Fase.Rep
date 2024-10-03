@@ -1,0 +1,25 @@
+create table "funcionarios" (
+	"id" serial primary key,
+	"nome" text not null,
+	"email" text not null
+);
+
+select * from funcionarios;
+
+create table "departamentos" (
+	"id" serial primary key,
+	"nome" text not null,
+	"gerente" text not null,
+	"id_funcionario" integer unique references funcionarios(id)
+);
+
+select * from departamentos;
+
+create table "projetos" (
+	"id" serial primary key,
+	"nome" text not null,
+	"descricao" text not null,
+	"id_funcionario" integer references funcionarios(id)
+);
+
+select * from projetos;

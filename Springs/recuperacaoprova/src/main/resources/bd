@@ -1,0 +1,27 @@
+CREATE TABLE animais (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    adotante_id INT,
+    CONSTRAINT fk_adotante FOREIGN KEY (adotante_id) 
+        REFERENCES adotantes (id)
+);
+
+
+CREATE TABLE adotantes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL
+);
+
+
+CREATE TABLE historico_adocao (
+    id SERIAL PRIMARY KEY,
+    animal_id INT NOT NULL,
+    adotante_id INT NOT NULL,
+    data_adocao VARCHAR NOT NULL,
+    CONSTRAINT fk_animal FOREIGN KEY (animal_id)   
+    REFERENCES animais (id),
+    CONSTRAINT fk_adotante FOREIGN KEY (adotante_id)
+    REFERENCES adotantes (id),
+);
