@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "bc2e0d4d-5864-4281-be6b-d89bf30646c1",
+		"name": "revisaoProva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33167811"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Bruno\",\r\n    \"email\": \"teste@bruno.com\",\r\n    \"departamento\": {\r\n        \"nome\": \"ADM\",\r\n        \"gerente\": \"Sabrina\"\r\n    },\r\n    \"projetos\": [\r\n        {\r\n            \"nome\": \"Sistema de vendas\",\r\n            \"descricao\": \"Desenvolvimento de um sistema pra vendas de computadores\"\r\n        },\r\n        {\r\n            \"nome\": \"Sistema de marketin\",\r\n            \"descricao\": \"Desenvolvimento de um sistema pra brainstorming de marketing\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
