@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-@Entity(name = "conexao")
+@Entity(name = "comentario")
 
 public class ComentarioEntity {
     @Id
