@@ -12,6 +12,7 @@ import com.example.liquidsa.repositories.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 
@@ -65,7 +66,65 @@ public class UsuarioService {
         return response;
     }
 
+    public ShowUsuarioDTO atualizarParcial(Long id, Map<String, Object> atualizacoes) {
+        UsuarioEntity usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
+    
+        // Aplicar as alterações nos campos fornecidos
+        if (atualizacoes.containsKey("nome")) {
+            usuario.setNome((String) atualizacoes.get("nome"));
+        }
+        if (atualizacoes.containsKey("email")) {
+            usuario.setEmail((String) atualizacoes.get("email"));
+        }
+        if (atualizacoes.containsKey("senha")) {
+            usuario.setSenha((String) atualizacoes.get("senha"));
+        }
+        if (atualizacoes.containsKey("bio")) {
+            usuario.setBio((String) atualizacoes.get("bio"));
+        }
+    
+        // Salva as alterações no banco de dados
+        usuario = usuarioRepository.save(usuario);
+    
+        // Converte para ShowUsuarioDTO
+        ShowUsuarioDTO response = new ShowUsuarioDTO();
+        response.setId(usuario.getId());
+        response.setNome(usuario.getNome());
+        response.setEmail(usuario.getEmail());
+        response.setBio(usuario.getBio());
+    
+        return response;
+    }
+
+    public ShowUsuarioDTO atualizarCompleto(Long id, CreateUsuarioDTO createUsuarioDTO) {
+        UsuarioEntity usuario = usuarioRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Usuário não encontrado"));
+    
+        // Atualiza todos os campos do usuário
+        usuario.setNome(createUsuarioDTO.getNome());
+        usuario.setEmail(createUsuarioDTO.getEmail());
+        usuario.setSenha(createUsuarioDTO.getSenha());
+        usuario.setBio(createUsuarioDTO.getBio());
+    
+        // Salva as alterações no banco de dados
+        usuario = usuarioRepository.save(usuario);
+    
+        // Converte para ShowUsuarioDTO
+        ShowUsuarioDTO response = new ShowUsuarioDTO();
+        response.setId(usuario.getId());
+        response.setNome(usuario.getNome());
+        response.setEmail(usuario.getEmail());
+        response.setBio(usuario.getBio());
+    
+        return response;
+    }
+    
     public void deletarUsuario(Long id) {
         usuarioRepository.deleteById(id);
     }
+
+
+
+    
 }
