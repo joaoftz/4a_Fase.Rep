@@ -1,0 +1,15 @@
+.logo {
+    width: 100px,
+  }
+  .LogoDirection{
+    display: flex;
+    flex-direction: row;
+  }
+  .logoContainer {
+    margin-bottom: 20px
+  }
+  .h1 {
+    padding-top: 50px;
+    font-size: 100px;
+    color:var(--cor-1)
+  }

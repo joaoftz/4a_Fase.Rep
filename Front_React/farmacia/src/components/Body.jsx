@@ -1,21 +1,18 @@
-import React from 'react';
-import ControladorDeSenhas from './ControleSenhas';
 
-const Body = () => {
+import './Body.css';
+import Section from './Section.jsx';
+import PasswordManager from './PasswordManager';
+
+function Body() {
   return (
-    <main style={styles.body}>
-      <h2>Bem-vindo ao Sistema de Gestão de Filas</h2>
-      <p>Escolha a opção desejada para gerar ou chamar senhas.</p>
-      <ControladorDeSenhas />
-    </main>
+    <div className="main">
+      <div className="principal">
+        <h2 className="heading">Conheça a Nova Direção</h2>
+        <Section />
+       
+      </div>
+    </div>
   );
-};
-
-const styles = {
-  body: {
-    padding: '20px',
-    textAlign: 'center',
-  }
-};
+}
 
 export default Body;

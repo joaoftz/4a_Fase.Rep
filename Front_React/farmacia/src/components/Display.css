@@ -1,0 +1,23 @@
+/* QueueDisplay.css */
+.queue-display {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .queue-display h4 {
+    margin-bottom: 5px;
+  }
+  
+  .queue-display ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .queue-display .current-password {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

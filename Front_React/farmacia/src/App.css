@@ -1,49 +1,56 @@
-
-/* Palleta de cores  */
-/* :root{
-  --cor-1: #e23e57;
-  --cor-2: #ffffff;
-  --cor-3: #e96a7e;
-  --cor-4: #ce1f3a;
-  --cor-5: #e6e6e6;
-  --cor-6: #ef97a4;
-} */
-/* Estilos globais */
-* {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Estilos para o Header */
-header {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Estilos para o Body */
-main {
-  padding: 20px;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-main h2 {
-  margin-bottom: 10px;
-  color: #333;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-main p {
-  font-size: 18px;
-  color: #666;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.all {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color:var(--cor-1);
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
